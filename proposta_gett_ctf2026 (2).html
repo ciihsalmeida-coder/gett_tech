@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mzen × GETT — Arte do stand e cobertura · Comex Tech Forum 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#7B2FF7;
+    --indigo:#4361EE;
+    --deep:#2B1B6B;
+    --ink:#16123A;
+    --ink-soft:#5A5580;
+    --mist:#F4F4FB;
+    --lilac:#E9E5FE;
+    --line:#DCD8F2;
+    --white:#FFFFFF;
+    --grad:linear-gradient(135deg,#7B2FF7 0%,#4361EE 100%);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--mist);color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  .disp{font-family:'Montserrat',sans-serif}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+  /* ---------- topbar ---------- */
+  .topbar{background:var(--white);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:16px;padding-bottom:16px}
+  .mark{display:flex;align-items:center;gap:11px}
+  .mark svg{width:26px;height:26px;flex:none}
+  .mark span{font-family:'Montserrat',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.01em;color:var(--deep)}
+  .topbar .ref{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--white);padding:64px 0 56px;border-bottom:1px solid var(--line)}
+  .brow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:24px}
+  .hero h1{
+    font-family:'Montserrat',sans-serif;font-weight:900;
+    font-size:clamp(38px,6.2vw,72px);line-height:.98;letter-spacing:-.03em;
+    max-width:16ch;color:var(--ink);
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-lead{margin-top:26px;font-size:19px;line-height:1.5;color:var(--ink-soft);max-width:52ch}
+  .hero-lead b{color:var(--ink);font-weight:600}
+
+  /* deadline flag */
+  .flag{
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    margin-top:38px;padding:18px 24px;border-radius:12px;
+    background:var(--lilac);border:1px solid #CFC6FB;
+  }
+  .flag .dot{width:10px;height:10px;border-radius:50%;background:var(--violet);flex:none;animation:blip 2.2s ease-in-out infinite}
+  @keyframes blip{0%,100%{opacity:.35;transform:scale(.86)}50%{opacity:1;transform:scale(1)}}
+  .flag .txt{font-size:15.5px;color:var(--deep);line-height:1.45}
+  .flag .txt b{font-weight:700}
+  .flag .cnt{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:var(--violet);border-radius:100px;padding:7px 15px;white-space:nowrap}
+
+  /* ---------- phase sections ---------- */
+  .phase{padding:74px 0;border-bottom:1px solid var(--line)}
+  .phase-head{margin-bottom:38px}
+  .phase-tag{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--white);
+    background:var(--deep);border-radius:4px;padding:5px 11px;margin-bottom:18px;
+  }
+  .phase h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(27px,4vw,42px);line-height:1.02;letter-spacing:-.02em}
+  .phase-lead{margin-top:16px;font-size:18px;color:var(--ink-soft);max-width:60ch;line-height:1.55}
+  .phase-lead b{color:var(--ink);font-weight:600}
+
+  /* signature: dimensioned drawing */
+  .draw{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:30px 26px 22px;margin-bottom:26px}
+  .draw svg{width:100%;height:auto;display:block}
+  .draw .cap{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:16px;text-align:center}
+
+  .art-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+
+  .pack{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:30px 28px 32px}
+  .pack.accent{background:var(--grad);border:0;color:var(--white)}
+  .pack-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:6px}
+  .pack h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:23px;letter-spacing:-.01em;line-height:1.1}
+  .pack .price{font-family:'Montserrat',sans-serif;font-weight:900;font-size:34px;letter-spacing:-.02em;color:var(--violet);white-space:nowrap;line-height:1}
+  .pack.accent .price{color:var(--white)}
+  .pack .price small{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:400;color:var(--ink-soft)}
+  .pack.accent .price small{color:rgba(255,255,255,.75)}
+  .pack .sub{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .pack.accent .sub{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.28)}
+  .pack ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .pack li{position:relative;padding-left:24px;font-size:15px;line-height:1.45;color:var(--ink-soft)}
+  .pack.accent li{color:rgba(255,255,255,.92)}
+  .pack li::before{
+    content:"";position:absolute;left:0;top:7px;width:11px;height:11px;border-radius:3px;
+    background:var(--lilac);box-shadow:inset 0 0 0 1.5px var(--violet);
+  }
+  .pack.accent li::before{background:rgba(255,255,255,.2);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.85)}
+  .pack li b{color:var(--ink);font-weight:600}
+  .pack.accent li b{color:var(--white)}
+
+  /* spec sheet */
+  .spec{background:var(--deep);border-radius:14px;padding:26px 24px 28px;color:var(--white)}
+  .spec h4{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#B9AEFF;margin-bottom:18px}
+  .spec dl{display:flex;flex-direction:column;gap:0}
+  .spec .row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+  .spec .row:last-child{border-bottom:0}
+  .spec dt{font-size:13.5px;color:rgba(255,255,255,.7)}
+  .spec dd{font-family:'IBM Plex Mono',monospace;font-size:13px;text-align:right;color:var(--white)}
+  .spec .warn{margin-top:18px;font-size:13px;line-height:1.45;color:#C9BFFF;border-left:2px solid var(--violet);padding-left:12px}
+
+  /* coverage tiers */
+  .tiers{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;align-items:start}
+
+  /* combo */
+  .combo{background:var(--white);border:2px solid var(--violet);border-radius:16px;padding:34px 32px 36px;display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center}
+  .combo h3{font-family:'Montserrat',sans-serif;font-weight:900;font-size:28px;letter-spacing:-.02em;margin-bottom:12px;line-height:1.05}
+  .combo p{color:var(--ink-soft);font-size:15.5px;line-height:1.5}
+  .combo ul{list-style:none;margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .combo li{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--deep);background:var(--lilac);border-radius:100px;padding:6px 13px}
+  .combo .box{text-align:right}
+  .combo .was{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);text-decoration:line-through}
+  .combo .now{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(38px,5vw,52px);letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+  .combo .nb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);margin-top:6px}
+
+  /* terms */
+  .terms{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+  .tlist{display:flex;flex-direction:column}
+  .tr{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+  .tr:first-child{border-top:1px solid var(--line)}
+  .tr dt{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+  .tr dd{font-size:15px;line-height:1.45}
+  .tr dd b{color:var(--violet);font-weight:600}
+  .aside{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px 24px}
+  .aside .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--violet);display:block;margin-bottom:12px}
+  .aside h4{font-family:'Montserrat',sans-serif;font-weight:800;font-size:19px;margin-bottom:10px;line-height:1.15}
+  .aside p{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+
+  /* close */
+  .close{background:var(--grad);color:var(--white);padding:80px 0 86px;text-align:center}
+  .close h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(32px,5.4vw,58px);letter-spacing:-.03em;line-height:1;max-width:17ch;margin:0 auto 22px}
+  .close p{max-width:46ch;margin:0 auto 34px;font-size:18px;color:rgba(255,255,255,.9)}
+  .cta{display:inline-flex;align-items:center;gap:12px;background:var(--white);color:var(--violet);text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17.5px;padding:17px 34px;border-radius:8px;transition:transform .2s,box-shadow .2s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px -16px rgba(0,0,0,.4)}
+  .cta svg{width:18px;height:18px}
+  .sign{margin-top:46px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:rgba(255,255,255,.82);line-height:1.75}
+  .sign b{color:var(--white);font-weight:500}
+
+  footer{background:var(--white);padding:24px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+
+  @media(max-width:880px){
+    .art-grid,.tiers,.combo,.terms{grid-template-columns:1fr}
+    .combo .box{text-align:left}
+  }
+  @media(max-width:520px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    .phase{padding:52px 0}
+    .hero{padding:44px 0 42px}
+    .tr{grid-template-columns:1fr;gap:4px}
+    .flag .cnt{margin-left:0}
+  }
+  a:focus-visible,.cta:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){.flag .dot{animation:none;opacity:1}*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar"><div class="wrap">
+  <div class="mark">
+    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M4 6 h16 a10 10 0 0 1 -10 10 h-6 z" fill="#7B2FF7"/>
+      <path d="M22 9 h14 a12 12 0 0 1 -12 12 h-2 z" fill="#4361EE"/>
+      <path d="M11 19 h9 v8 a11 11 0 0 1 -9 9 z" fill="#5B47F0"/>
+    </svg>
+    <span>mzen</span>
+  </div>
+  <div class="ref">Proposta MZN-CTF26-GETT-01 · para GETT</div>
+</div></div>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <p class="brow">Comex Tech Forum 2026 · Transamérica Expo Center · Stand 9 m²</p>
+  <h1>Seu stand de 9 m² <em>falando por você.</em></h1>
+  <p class="hero-lead">Três metros por três é pouco espaço e muita concorrência. Esta proposta cobre as duas pontas que decidem o resultado: a <b>arte que veste o stand</b> antes da porta abrir, e a <b>cobertura audiovisual</b> que transforma o dia em conteúdo para o resto do ano.</p>
+
+  <div class="flag">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="txt"><b>A arte tem prazo fixo:</b> o evento exige os arquivos finalizados até <b>05/08/2026</b>. Depois dessa data a montagem não aceita alteração.</span>
+    <span class="cnt">Produção precisa começar já</span>
+  </div>
+</div></header>
+
+<!-- ANTES -->
+<section class="phase"><div class="wrap">
+  <div class="phase-head">
+    <span class="phase-tag">Antes · o stand vestido</span>
+    <h2>Arte do stand</h2>
+    <p class="phase-lead">O stand de 9 m² tem três superfícies que falam com quem passa no corredor: o painel de fundo, o balcão e a TV. A Mzen desenha as três dentro da <b>especificação técnica do evento</b> e entrega os arquivos fechados, prontos para a montagem — sem risco de recusa na gráfica.</p>
+  </div>
+
+  <div class="draw">
+    <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Desenho técnico das áreas de impressão: painel 200 por 300 centímetros, TV 43 polegadas e balcão 100 por 100 centímetros">
+      <!-- ground line -->
+      <path d="M30 312 H610" stroke="#DCD8F2" stroke-width="1.5"/>
+      <text x="30" y="330" fill="#5A5580" font-family="IBM Plex Mono,monospace" font-size="10" letter-spacing="1">NÍVEL DO PISO</text>
+
+      <!-- PAINEL 200x300 -> 180x270 -->
+      <rect x="70" y="42" width="180" height="270" rx="2" fill="#F4F4FB" stroke="#7B2FF7" stroke-width="2"/>
+      <text x="160" y="170" text-anchor="middle" fill="#2B1B6B" font-family="Montserrat,sans-serif" font-size="15" font-weight="800">PAINEL</text>
+      <text x="160" y="190" text-anchor="middle" fill="#5A5580" font-family="IBM Plex Mono,monospace" font-size="11">frontlight</text>
+      <!-- dims painel -->
+      <path d="M70 28 H250" stroke="#4361EE" stroke-width="1"/>
+      <path d="M70 24 V32 M250 24 V32" stroke="#4361EE" stroke-width="1"/>
+      <text x="160" y="18" text-anchor="middle" fill="#4361EE" font-family="IBM Plex Mono,monospace" font-size="11">200 cm</text>
+      <path d="M56 42 V312" stroke="#4361EE" stroke-width="1"/>
+      <path d="M52 42 H60 M52 312 H60" stroke="#4361EE" stroke-width="1"/>
+      <text x="46" y="182" text-anchor="middle" fill="#4361EE" font-family="IBM Plex Mono,monospace" font-size="11" transform="rotate(-90 46 182)">300 cm</text>
+
+      <!-- TV 43" -> 86x49 -->
+      <rect x="330" y="60" width="115" height="65" rx="3" fill="#2B1B6B" stroke="#4361EE" stroke-width="2"/>
+      <text x="387" y="90" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat,sans-serif" font-size="13" font-weight="800">TV 43"</text>
+      <text x="387" y="107" text-anchor="middle" fill="#B9AEFF" font-family="IBM Plex Mono,monospace" font-size="10">vídeo em loop</text>
+      <text x="387" y="144" text-anchor="middle" fill="#5A5580" font-family="IBM Plex Mono,monospace" font-size="10.5">16:9 · sem áudio</text>
+
+      <!-- BALCAO 100x100 -> 90x90 -->
+      <rect x="342" y="222" width="90" height="90" rx="2" fill="#F4F4FB" stroke="#7B2FF7" stroke-width="2"/>
+      <text x="387" y="262" text-anchor="middle" fill="#2B1B6B" font-family="Montserrat,sans-serif" font-size="13" font-weight="800">BALCÃO</text>
+      <text x="387" y="279" text-anchor="middle" fill="#5A5580" font-family="IBM Plex Mono,monospace" font-size="10">frente</text>
+      <path d="M342 208 H432" stroke="#4361EE" stroke-width="1"/>
+      <path d="M342 204 V212 M432 204 V212" stroke="#4361EE" stroke-width="1"/>
+      <text x="387" y="198" text-anchor="middle" fill="#4361EE" font-family="IBM Plex Mono,monospace" font-size="11">100 cm</text>
+      <path d="M446 222 V312" stroke="#4361EE" stroke-width="1"/>
+      <path d="M442 222 H450 M442 312 H450" stroke="#4361EE" stroke-width="1"/>
+      <text x="462" y="271" fill="#4361EE" font-family="IBM Plex Mono,monospace" font-size="11">100 cm</text>
+
+      <!-- LOGO frontlight note -->
+      <rect x="512" y="42" width="90" height="34" rx="3" fill="#FFFFFF" stroke="#7B2FF7" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="557" y="63" text-anchor="middle" fill="#7B2FF7" font-family="Montserrat,sans-serif" font-size="11" font-weight="800">LOGOTIPO</text>
+      <text x="557" y="92" text-anchor="middle" fill="#5A5580" font-family="IBM Plex Mono,monospace" font-size="10">frontlight</text>
+    </svg>
+    <p class="cap">Áreas de impressão do stand 9 m² — proporções reais</p>
+  </div>
+
+  <div class="art-grid">
+    <article class="pack">
+      <div class="pack-top">
+        <h3>Arte do stand</h3>
+        <div class="price"><small>R$</small> 2.200</div>
+      </div>
+      <div class="sub">painel + balcão + logotipo · 2 rodadas de ajuste</div>
+      <ul>
+        <li>Painel frontlight <b>200 × 300 cm</b> — conceito, layout e finalização</li>
+        <li>Frente do balcão <b>100 × 100 cm</b></li>
+        <li>Aplicação do <b>logotipo frontlight</b></li>
+        <li>Adequação da marca da GETT ao ambiente do stand (cor, contraste, leitura a 5 m)</li>
+        <li><b>Arquivos fechados</b> na especificação do evento, prontos para envio</li>
+        <li>Duas rodadas de ajuste incluídas</li>
+      </ul>
+    </article>
+
+    <div class="spec">
+      <h4>Ficha técnica do evento</h4>
+      <dl>
+        <div class="row"><dt>Painel</dt><dd>200 × 300 cm</dd></div>
+        <div class="row"><dt>Balcão</dt><dd>100 × 100 cm</dd></div>
+        <div class="row"><dt>Resolução</dt><dd>100 DPI · tamanho final</dd></div>
+        <div class="row"><dt>Cor</dt><dd>CMYK</dd></div>
+        <div class="row"><dt>Vetor</dt><dd>PDF · fontes em curvas</dd></div>
+        <div class="row"><dt>Imagem</dt><dd>JPG ou TIF (LZW)</dd></div>
+        <div class="row"><dt>Envio</dt><dd>até 05/08/2026</dd></div>
+      </dl>
+      <p class="warn">Tudo que ultrapassa a linha de corte é descartado na montagem. Por isso a arte é construída já dentro da máscara oficial — o arquivo sai pronto, sem retrabalho.</p>
+    </div>
+  </div>
+
+  <article class="pack" style="margin-top:22px">
+    <div class="pack-top">
+      <h3>Vídeo em loop para a TV 43" <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:400;color:var(--ink-soft);white-space:nowrap">· cortesia no pacote completo</span></h3>
+      <div class="price" style="font-size:26px"><small>R$</small> 1.400 <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:400;color:var(--ink-soft)">avulso</span></div>
+    </div>
+    <div class="sub">até 60 s · looping contínuo · sem áudio · <b style="color:var(--violet)">incluso sem custo em Cobertura + Arte</b></div>
+    <ul>
+      <li>Peça em movimento com a marca, os serviços e o contato da GETT</li>
+      <li>Ritmo e tipografia calibrados para <b>leitura à distância</b>, no meio do barulho da feira</li>
+      <li>Entregue no formato e resolução da TV do stand, pronto para dar play</li>
+      <li>Reaproveitável nas redes e nas próximas feiras do calendário</li>
+    </ul>
+  </article>
+</div></section>
+
+<!-- DURANTE -->
+<section class="phase"><div class="wrap">
+  <div class="phase-head">
+    <span class="phase-tag">Durante e depois · o dia registrado</span>
+    <h2>Cobertura do evento</h2>
+    <p class="phase-lead">Feira não se repete. O que não foi captado no dia, não volta. A Mzen cobre o stand e a movimentação do evento e devolve <b>material editado</b> — não uma pasta de arquivos brutos para alguém resolver depois.</p>
+  </div>
+
+  <div class="tiers">
+    <article class="pack">
+      <div class="pack-top">
+        <h3>Essencial</h3>
+        <div class="price"><small>R$</small> 4.000</div>
+      </div>
+      <div class="sub">1 dia · 1 operador em campo + edição</div>
+      <ul>
+        <li>Captação do stand, bastidores e movimentação</li>
+        <li><b>30 fotos</b> tratadas + brutas em link</li>
+        <li><b>2 reels</b> editados (vertical)</li>
+        <li>Vídeo resumo até 60 s</li>
+        <li>Entrega em até 5 dias úteis</li>
+      </ul>
+    </article>
+
+    <article class="pack accent">
+      <div class="pack-top">
+        <h3>Completa</h3>
+        <div class="price"><small>R$</small> 4.500</div>
+      </div>
+      <div class="sub">1 dia · dupla em campo (vídeo + foto)</div>
+      <ul>
+        <li>Equipe: <b>filmmaker e fotógrafo</b> cobrindo o stand em paralelo</li>
+        <li><b>60 fotos</b> tratadas + brutas em link</li>
+        <li><b>3 reels recap</b> do dia</li>
+        <li><b>2 entrevistas</b> legendadas, roteiro livre</li>
+        <li>Vídeo resumo até 90 s</li>
+        <li>Cobertura de stories durante o evento</li>
+        <li>Entrega prioritária</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<!-- COMBO -->
+<section class="phase"><div class="wrap">
+  <div class="combo">
+    <div>
+      <h3>Pacote completo: cobertura + arte do stand</h3>
+      <p>Contratando as duas entregas juntas, o <b>vídeo em loop da TV 43" entra sem custo</b> — R$ 1.400 de cortesia. A arte começa a ser produzida na hora para cumprir o prazo de 05/08, e a mesma direção visual atravessa o painel, o balcão, a TV e o conteúdo publicado depois. A GETT aparece com uma cara só.</p>
+      <ul>
+        <li>Cobertura Completa</li>
+        <li>Arte do stand</li>
+        <li>Loop TV 43" — cortesia</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="was">R$ 8.100 com o loop avulso</div>
+      <div class="now">R$ 6.700</div>
+      <div class="nb">cobertura + arte · loop de cortesia (R$ 1.400)</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CONDIÇÕES -->
+<section class="phase"><div class="wrap">
+  <div class="phase-head">
+    <span class="phase-tag">Condições</span>
+    <h2>Como funciona</h2>
+  </div>
+  <div class="terms">
+    <dl class="tlist">
+      <div class="tr"><dt>Pagamento</dt><dd>Via Pix — <b>50% no fechamento</b> do contrato e 50% antes do início da produção.</dd></div>
+      <div class="tr"><dt>Contrato</dt><dd>Enviado para assinatura em até <b>5 dias úteis</b> após a confirmação.</dd></div>
+      <div class="tr"><dt>Arte</dt><dd>Produção inicia na aprovação. Arquivos entregues com folga para o envio de <b>05/08/2026</b>.</dd></div>
+      <div class="tr"><dt>Cobertura</dt><dd>Conteúdos do dia entregues no <b>mesmo dia</b> (pacote Completa). Demais entregas em até 5 dias úteis.</dd></div>
+      <div class="tr"><dt>Validade</dt><dd>Esta proposta vale por <b>7 dias úteis</b>.</dd></div>
+      <div class="tr"><dt>Não incluso</dt><dd>Montagem do stand, impressão dos materiais e locação de equipamentos do pavilhão.</dd></div>
+    </dl>
+
+    <aside class="aside">
+      <span class="k">Depois do CTF</span>
+      <h4>A marca criada aqui serve o ano inteiro.</h4>
+      <p>A direção visual do stand e o material captado no evento viram base para as próximas feiras do calendário comex. Podemos manter a GETT presente em todas elas com um contrato anual de cobertura — conversa para depois da feira, não condição desta proposta.</p>
+    </aside>
+  </div>
+</div></section>
+
+<!-- CLOSE -->
+<section class="close"><div class="wrap">
+  <h2>O corredor não espera. O prazo da arte, menos ainda.</h2>
+  <p>Aprovando esta semana, a arte entra em produção com folga e a cobertura fica reservada na agenda do evento.</p>
+  <a class="cta" href="#" aria-label="Aprovar proposta e iniciar produção">
+    Aprovar e iniciar produção
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="#7B2FF7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <div class="sign">
+    <b>Mzen Marketing</b><br>
+    contato@mzen.com.br · @mzen.marketing · mzenmarketing.com.br<br>
+    proposta MZN-CTF26-GETT-01
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Mzen Marketing · São Paulo</span>
+  <span>Especialista em comex</span>
+</div></footer>
+
+</body>
+</html>
